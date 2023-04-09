@@ -5,6 +5,16 @@ export const controller = (num, setNum) => {
 }
 
 
-export const calculateMark = () => {
+export const calculateMark = (questions, answerts) => {
+    let mark = 0
 
+    answerts.forEach(answert => {
+        questions.forEach(question => {
+            if (answert.id === question.id && answert.answert === question.answer) {
+                mark+=1
+            }
+        })
+    })
+
+    return mark
 }

@@ -14,7 +14,6 @@ const Questions = () => {
     useEffect(() => {
         const questionSelected = data.find(eachQueastion => +eachQueastion.id === questionNum)
         setQuestion(questionSelected)
-        console.log(answerts);
     }, [questionNum])
 
     const submitHandler = () => {

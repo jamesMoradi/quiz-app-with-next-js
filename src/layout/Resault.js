@@ -1,14 +1,16 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { calculateMark } from '@/functions/counterController'
 import questions from '../../public/quiz.json'
 
 const Resault = ({answerts}) => {
+  const [mark, setMark] = useState(0)
+
   useEffect(() => {
-    console.log({answerts, calculateMark, questions});
+    setMark(calculateMark(questions, answerts))
   }, [])
 
   return (
-    <div>Resault</div>
+    <div>{console.log(mark)}</div>
   )
 }
 
